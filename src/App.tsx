@@ -6,7 +6,6 @@ import {
   useRef,
   useState,
 } from 'react';
-import { useScan } from 'react-scan';
 
 interface TodoData {
   id: number;
@@ -92,11 +91,6 @@ export const TodoList = ({ todos, deleteTodo }: TodoListProps): JSX.Element => (
 );
 
 export const App = (): JSX.Element => {
-  useScan({
-    enabled: true,
-    log: true,
-  });
-
   const [todos, setTodos] = useState<TodoData[]>(DEFAULT_TODOS);
   const [newTodoValue, setNewTodoValue] = useState<string>('');
   const generateIdRef = useRef(

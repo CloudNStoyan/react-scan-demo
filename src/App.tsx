@@ -6,7 +6,6 @@ import {
   useRef,
   useState,
 } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { useScan } from 'react-scan';
 
 interface TodoData {
